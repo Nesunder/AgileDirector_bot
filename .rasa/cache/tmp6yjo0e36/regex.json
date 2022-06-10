@@ -1,0 +1,42 @@
+[
+  {
+    "name": "nombres",
+    "pattern": "(\\bPedro\\b|\\bTobias\\b|\\bCamila\\b|\\bJuan\\b|\\bFacundo\\b|\\bAgileBot_Room\\b|\\bDirector\\b)"
+  },
+  {
+    "name": "ubicacion",
+    "pattern": "(\\bescritorio\\b|\\bmueble\\b|\\bKanban\\b|\\bcocina\\b|\\bmesa\\b|\\bbarra\\b|\\bbiblioteca\\b|\\bUbicacionCamara1\\b|\\bUbicacionCamara2\\b|\\bUbicacionCamara3\\b|\\bUbicacionCamara4\\b|\\bCamara3eraPersona\\b|\\broom1\\b|\\broom2\\b|\\bluz\\b|\\bcajero\\b)"
+  },
+  {
+    "name": "objeto",
+    "pattern": "(\\bTarjeta\\b|\\bCafePedro\\b|\\bcafe\\b|\\bte\\b|\\btaza\\ de\\ te\\b|\\btaza\\ de\\ cafe\\b|\\bbotella\\ de\\ agua\\b|\\btaza\\b|\\blibro\\b|\\bCamera\\b|\\bTask\\b)"
+  },
+  {
+    "name": "objetoTrainer",
+    "pattern": "(\\bcajero\\b)"
+  },
+  {
+    "name": "operacion",
+    "pattern": "(\\blogin\\ entrenamiento\\b|\\bmenu\\ entrenamiento\\b|\\bextraccion\\ entrenamiento\\b|\\bextraccion\\ especifica_entrenamiento\\b|\\binicio\\ entrenamiento\\b|\\bsandbox\\b)"
+  },
+  {
+    "name": "animacionConjunta",
+    "pattern": "(\\bdialoga\\b|\\bTorso_Enojo_Gritando\\b|\\bsalta\\b|\\bbaila\\b|\\bconversa\\b|\\binteractua\\b|\\bcharla\\b|\\bhabla\\b|\\bdiscute\\b)"
+  },
+  {
+    "name": "animacionSolitaria",
+    "pattern": "(\\bsenala\\b|\\bTalking1\\b|\\bbaila\\b|\\btomar\\b|\\bbebe\\b|\\bapuntar\\b|\\bcharla\\b|\\bsaltar\\b)"
+  },
+  {
+    "name": "asiento",
+    "pattern": "(\\bsilla\\b|\\bbarra\\b|\\bbanqueta\\b|\\bbanquito\\b|\\bsillon\\b)"
+  },
+  {
+    "name": "distanciaUnity",
+    "pattern": "(\\b\\\\d\\{1,12\\}\\b)"
+  },
+  {
+    "name": "boton",
+    "pattern": "(\\bVerde\\b|\\bRojo\\b|\\bAmarillo\\b|\\bSuperiorDerecho\\b|\\bMedioSuperiorDerecho\\b|\\bMedioInferiorDerecho\\b|\\bInferiorDerecho\\b|\\bSuperiorIzquierdo\\b|\\bMedioSuperiorIzquierdo\\b|\\bMedioInferiorIzquierdo\\b|\\bInferiorIzquierdo\\b|\\b0\\b|\\b1\\b|\\b2\\b|\\b3\\b|\\b4\\b|\\b5\\b|\\b6\\b|\\b7\\b|\\b8\\b|\\b9\\b)"
+  }
+]

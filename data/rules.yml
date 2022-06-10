@@ -1,0 +1,41 @@
+version: "3.1"
+
+rules:
+
+- rule: saludo
+  steps:
+  - intent: saludar
+  - action: utter_saludo
+  
+
+
+- rule: presentacion
+  steps:
+  - intent: presentarse
+  - action: action_guardar_nombre
+
+- rule: agradecimiento
+  steps:
+  - intent: agradecer
+  - action: utter_agradecimiento
+
+- rule: despedida
+  steps: 
+  - intent: despedirse
+  - action: utter_despedida
+
+- rule: mover_avatar
+  steps:
+  - intent: moverAvatar
+  - action: action_guardar_accion
+
+- rule: apretar_boton
+  steps: 
+  - intent: apretar_boton
+  - action: action_guardar_accion
+
+- rule: registrar_accion
+  steps: 
+    - intent: informar_accion
+    - action: action_guardar_accion
+    - action: utter_preg_sig_accion

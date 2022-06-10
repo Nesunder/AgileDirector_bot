@@ -1,0 +1,111 @@
+version: "3.1"
+
+intents:
+  - saludar
+  - informar_accion
+  - presentarse
+  - despedirse
+  - agradecer
+  - afirmar
+  - negar
+  - cajero
+  - agarrar
+  - conjunta
+  - reproducir_animacion
+  - dejar
+  - hablar
+  - seguir
+  - sentarse
+  - moverObjeto
+  - moverAvatar
+  - apretar_boton
+  - empezar_informar
+
+entities:
+  - nombre
+  - nombres
+  - accion
+  - agilebot
+  - ubicacion
+  - objeto
+  - objetoTrainer
+  - operacion
+  - animacionConjunta
+  - animacionSolitaria
+  - asiento
+  - distanciaUnity
+  - numero_boton
+  - boton
+
+slots:
+  nombre:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: nombre
+  nombres:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: nombres
+  boton:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: boton
+  numero_boton:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: boton
+  ubicacion:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: ubicacion
+  animacion_solitaria:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: animacionSolitaria
+
+
+
+responses:
+  utter_saludo:
+  - text: Hola, soy el Director y puedo diseñar mundos virtuales y escenas a medida. Decime una acción que quieras que ejecute.
+  
+  utter_despedida:
+  - text: Nos vemos
+  - text: Hasta luego
+  
+  utter_agradecimiento:
+  - text: No hay de que!
+
+  utter_como_se_informa:
+  - text: Decime cada acción, una por una así puedo registrarlas bien. 
+
+  utter_preg_sig_accion:
+  - text: Qué sigue?
+  - text: Qué acción sigue?
+
+actions:
+  - utter_saludo
+  - utter_agradecimiento
+  - utter_despedida
+  - utter_preg_sig_accion
+  - utter_como_se_informa
+  - action_guardar_accion
+  - action_guardar_nombre
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
