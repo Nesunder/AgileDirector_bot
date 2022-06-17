@@ -1,41 +1,39 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - saludar
-  - informar_accion
-  - presentarse
-  - despedirse
-  - agradecer
-  - afirmar
-  - negar
-  - cajero
-  - agarrar
-  - conjunta
-  - reproducir_animacion
-  - dejar
-  - hablar
-  - seguir
-  - sentarse
-  - moverObjeto
-  - moverAvatar
-  - apretar_boton
-  - empezar_informar
-
+- afirmar
+- agarrar
+- agradecer
+- apretar_boton
+- cajero
+- conjunta
+- dejar
+- despedirse
+- empezar_informar
+- hablar
+- informar_accion
+- moverAvatar
+- moverObjeto
+- negar
+- presentarse
+- reproducir_animacion
+- saludar
+- seguir
+- sentarse
 entities:
-  - nombre
-  - nombres
-  - accion
-  - agilebot
-  - ubicacion
-  - objeto
-  - objetoTrainer
-  - operacion
-  - animacionConjunta
-  - animacionSolitaria
-  - asiento
-  - distanciaUnity
-  - numero_boton
-  - boton
+- nombres
+- nombre
+- accion
+- agilebot
+- ubicacion
+- objeto
+- objetoTrainer
+- operacion
+- animacionConjunta
+- animacionSolitaria
+- asiento
+- distanciaUnity
+- numero_boton
+- boton
 
 slots:
   nombre:
@@ -74,38 +72,51 @@ slots:
     mappings:
     - type: from_entity
       entity: animacionSolitaria
-
-
+  distancia_unity:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: distanciaUnity
+  objeto:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: objeto
 
 responses:
   utter_saludo:
   - text: Hola, soy el Director y puedo diseñar mundos virtuales y escenas a medida. Decime una acción que quieras que ejecute.
-  
   utter_despedida:
   - text: Nos vemos
   - text: Hasta luego
-  
   utter_agradecimiento:
   - text: No hay de que!
-
   utter_como_se_informa:
-  - text: Decime cada acción, una por una así puedo registrarlas bien. 
-
+  - text: Decime cada acción, una por una así puedo registrarlas bien.
   utter_preg_sig_accion:
   - text: Qué sigue?
   - text: Qué acción sigue?
 
 actions:
-  - utter_saludo
-  - utter_agradecimiento
-  - utter_despedida
-  - utter_preg_sig_accion
-  - utter_como_se_informa
-  - action_guardar_accion
-  - action_guardar_nombre
-
+- accion_agarrar
+- accion_cajero
+- accion_conjunta
+- accion_dejar
+- accion_mover_avatar
+- accion_mover_objeto
+- accion_reproducir_animacion
+- accion_seguir
+- accion_sentarse
+- action_guardar_accion
+- action_guardar_nombre
+- utter_agradecimiento
+- utter_como_se_informa
+- utter_despedida
+- utter_preg_sig_accion
+- utter_saludo
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-

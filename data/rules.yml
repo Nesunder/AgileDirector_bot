@@ -7,8 +7,6 @@ rules:
   - intent: saludar
   - action: utter_saludo
   
-
-
 - rule: presentacion
   steps:
   - intent: presentarse
@@ -24,18 +22,57 @@ rules:
   - intent: despedirse
   - action: utter_despedida
 
-- rule: mover_avatar
-  steps:
-  - intent: moverAvatar
-  - action: action_guardar_accion
-
 - rule: apretar_boton
   steps: 
   - intent: apretar_boton
   - action: action_guardar_accion
 
-- rule: registrar_accion
+- rule: hablar
   steps: 
-    - intent: informar_accion
-    - action: action_guardar_accion
-    - action: utter_preg_sig_accion
+  - intent: hablar
+  - action: action_guardar_accion
+
+- rule: agarrar
+  steps:
+  - intent: agarrar
+  - action: accion_agarrar
+
+- rule: conjunta
+  steps:
+  - intent: conjunta
+  - action: accion_conjunta
+
+- rule: reproducir_animacion
+  steps:
+  - intent: reproducir_animacion
+  - action: accion_reproducir_animacion
+
+- rule: dejar
+  steps:
+  - intent: dejar
+  - action: accion_dejar
+
+- rule: Seguir
+  steps:
+  - intent: seguir
+  - action: accion_seguir
+
+- rule: Sentarse
+  steps:
+  - intent: sentarse
+  - action: accion_sentarse
+
+- rule: MoverObjeto
+  steps:
+  - intent: moverObjeto
+  - action: accion_mover_objeto
+
+- rule: cajero
+  steps:
+  - intent: cajero
+  - action: accion_cajero
+
+- rule: MoverAvatar
+  steps:
+  - intent: moverAvatar
+  - action: accion_mover_avatar

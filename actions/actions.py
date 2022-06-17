@@ -3,13 +3,12 @@
 #
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
-
-
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
+import json
 
 class ActionGuardarAccion(Action):
     
@@ -25,32 +24,37 @@ class ActionGuardarAccion(Action):
             nombre = tracker.get_slot("nombres")
             ubicacion = tracker.get_slot("ubicacion")
             animacion_solitaria = tracker.get_slot("animacion_solitaria")
-            f = open("F:\\Unity\dr-director-microlearning\Assets\Resources\CustomActions\cajerodemo2.json", 'w')
-
+        
             if(intent == "apretar_boton"):
-                f.write('{"Accion_ReproducirAnimacion": {\n')
-                f.write('   "avatar":' + '"' + nombre + '",\n')
-                f.write('   "animacion": "PresionarBoton2" \n')
-                f.write(" },\n")
-                f.write('"Accion_Cajero": {\n')
-                f.write('   "cajero": "cajero",\n')
-                f.write('   "operacion": "apretar_boton", \n')
-                f.write('   "boton":' + '"'+ boton + '"\n')
-                f.write(" }}")
-                f.close()
-            elif(intent == "moverAvatar"):
-                f.write('{"Accion_MoverAvatar": {\n')
-                f.write('   "avatar":' + '"' + nombre + '",\n')
-                f.write('   "ubicacion":' + '"' + ubicacion + '"\n')
-                f.write(" }}")
-                f.close()
-            else:
-                f.write('{"Accion_ReproducirAnimacion": {\n')
-                f.write('   "avatar":' + '"' + nombre + '",\n')
-                f.write('   "animacion":' + '"' + animacion_solitaria + '"\n')
-                f.write(" }}")
-                f.close()
+                dictionary = {
+                        "Accion_ReproducirAnimacion": {
+                            "avatar": nombre,
+                            "animacion": "PresionarBoton2"
+                        },
+                        "Accion Cajero": {
+                            "cajero": "cajero",
+                            "operacion": "apretar_boton",
+                            "boton": boton
+                        } }
+                        
 
-            dispatcher.utter_message(text= "Director dice  cargar las acciones de vuelta")
+            elif(intent == "hablar"):
+
+                text = str(tracker.latest_message['text'])
+                text = text.split('"')
+                print(text)
+                dictionary = { 
+                            "Accion_Hablar": {
+                                "avatar": nombre,
+                                "texto" : text[1],
+                                "modo": "1"
+                            } }
+
+            json_object = json.dumps(dictionary, indent = 4)
+
+            with open("F:\\Unity\dr-director-microlearning\Assets\Resources\CustomActions\cajerodemo2.json", 'w') as outfile:
+                    outfile.write(json_object)
+            dispatcher.utter_message(text= "Director dice cargar las acciones de vuelta")
+            dispatcher.utter_message(text= "Estoy en eso!")
 
             return[]

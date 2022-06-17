@@ -4,7 +4,7 @@ digraph  {
 1 [class=active, fontsize=12, label=action_session_start];
 2 [class=active, fontsize=12, label=action_guardar_accion];
 3 [class="intent dashed active", label="  ?  ", shape=rect];
-4 [class="intent active", fillcolor=lightblue, label="/moverAvatar", shape=rect, style=filled];
+4 [class="intent active", fillcolor=lightblue, label="/hablar", shape=rect, style=filled];
 0 -> "-1"  [class="", key=NONE, label=""];
 0 -> 1  [class=active, key=NONE, label=""];
 1 -> 4  [class=active, key=0];

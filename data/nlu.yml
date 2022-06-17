@@ -1,7 +1,5 @@
 version: "3.1"
-
 nlu:
-
 - intent: saludar
   examples: |
     - Hola
@@ -11,7 +9,6 @@ nlu:
     - Como andas
     - Holis
     - Hola que tal
-
 - intent: presentarse
   examples: |
     - [Marcelo](nombre)
@@ -25,7 +22,6 @@ nlu:
     - [juli](nombre)
     - [yami](nombre)
     - [nico](nombre)
-
 - intent: despedirse
   examples: |
     - Nos vemos
@@ -41,7 +37,6 @@ nlu:
     - Nos vemos mas tarde
     - no, chau
     - nos vemos
-
 - intent: agradecer
   examples: |
     - Gracias
@@ -49,7 +44,6 @@ nlu:
     - Estoy agradecido
     - Muchas gracias
     - no, gracias
-    
 - intent: afirmar
   examples: |
     - Si
@@ -66,7 +60,6 @@ nlu:
     - ok
     - de acuerdo
     - si
-
 - intent: negar
   examples: |
     - No
@@ -86,7 +79,125 @@ nlu:
     - no
     - ninguno más
     - nada mas
-
+- intent: cajero
+  examples: |
+    - Ahora el [cajero](objetoTrainer) muestra como [login entrenamiento](operacion)
+    - Ahora en el [cajero](objetoTrainer) se enseña como [login entrenamiento](operacion)
+    - el [cajero](objetoTrainer) muestra como [login entrenamiento](operacion)
+    - a continuacion el [cajero](objetoTrainer) explicara como [login entrenamiento](operacion)
+- intent: agarrar
+  examples: |
+    - [Pedro](nombres) agarra la [Tarjeta](objeto)
+    - [Pedro](nombres) agarra [CafePedro](objeto)
+    - [Tobias](nombres) sujeta la [Tarjeta](objeto)
+    - [Camila](nombres) agarra el [cafe](objeto)
+    - [Juan](nombres) sujeta el [cafe](objeto)
+    - [Pedro](nombres) toma el [Tarjeta](objeto)
+    - [Pedro](nombres) toma la [Tarjeta](objeto)
+    - [Pedro](nombres) levanta la [Tarjeta](objeto)
+    - [Pedro](nombres) levanta el [Tarjeta](objeto)
+- intent: conjunta
+  examples: |
+    - [Pedro](nombres) [dialoga](animacionConjunta) con [Tobias](nombres)
+- intent: reproducir_animacion
+  examples: |
+    - [Pedro](nombres) realiza animacion [senala](animacionSolitaria)
+    - [Pedro](nombres) reproducir animacion [senala](animacionSolitaria)
+    - [Pedro](nombres) [senala](animacionSolitaria)
+    - [Pedro](nombres) [charla](animacionSolitaria)
+- intent: apretar_boton
+  examples: |
+    - [Juan](nombres) toca boton numero [1](boton)
+    - [Juan](nombres) apreta boton cajero numero [0](boton)
+    - [Juan](nombres) Toca boton cajero numero [2](boton)
+    - [Juan](nombres) Apreta boton cajero numero [1](boton)
+    - [Juan](nombres) Toca boton numero [5](boton)
+    - [Juan](nombres) Toca boton cajero numero [9](boton)
+    - [Juan](nombres) Apreta boton numero [3](boton)
+    - [Juan](nombres) Acciona boton cajero numero [4](boton)
+    - [Juan](nombres) Acciona boton numero [5](boton)
+    - [Juan](nombres) Selecciona boton numero [6](boton)
+    - [Juan](nombres) Toca boton [Verde](boton)
+    - [Juan](nombres) Apreta boton cajero [Rojo](boton)
+    - [Juan](nombres) Toca boton [Amarillo](boton)
+    - [Juan](nombres) Apreta boton cajero [SuperiorDerecho](boton)
+    - [Juan](nombres) Toca boton cajero [MedioSuperiorDerecho](boton)
+    - [Juan](nombres) Apreta boton [MedioInferiorDerecho](boton)
+    - [Juan](nombres) Acciona boton cajero [InferiorDerecho](boton)
+    - [Juan](nombres) Acciona boton [SuperiorIzquierdo](boton)
+    - [Juan](nombres) Selecciona boton cajero [MedioSuperiorIzquierdo](boton)
+    - [Juan](nombres) Selecciona boton [MedioInferiorIzquierdo](boton)
+- intent: dejar
+  examples: |
+    - [Pedro](nombres) deja lo que tiene en la mano en la [mesa](ubicacion)
+    - [Juan](nombres) deja la [tarjeta](objeto) en el [mueble](ubicacion)
+    - [Facundo](nombres) deja en [Kanban](ubicacion)
+    - [Juan](nombres) deja el [libro](objeto) en la [biblioteca](ubicacion)
+    - [Juan](nombres) deja lo que lleva en la [biblioteca](ubicacion)
+    - [Juan](nombres) deja lo que lleva en el [biblioteca](ubicacion)
+    - [Juan](nombres) deja lo que lleva sobre [biblioteca](ubicacion)
+    - [Juan](nombres) apoya lo que lleva en la [biblioteca](ubicacion)
+    - [Juan](nombres) apoya lo que lleva en el [biblioteca](ubicacion)
+    - [Juan](nombres) apoya lo que lleva sobre [biblioteca](ubicacion)
+    - [Juan](nombres) suelta lo que lleva en la [biblioteca](ubicacion)
+    - [Juan](nombres) suelta lo que lleva en el [biblioteca](ubicacion)
+    - [Juan](nombres) suelta lo que lleva sobre [biblioteca](ubicacion)
+    - [Juan](nombres) devuelve lo que lleva en el [biblioteca](ubicacion)
+    - [Juan](nombres) devuelve lo que lleva en la [biblioteca](ubicacion)
+    - [Juan](nombres) devuelve lo que lleva sobre [biblioteca](ubicacion)
+    - [Juan](nombres) ponela de ese lado en la boquilla donde está la [biblioteca](ubicacion), la boquilla es la que está a tu derecha
+    - [Juan](nombres) ponela de ese lado en la boquilla donde está la [biblioteca](ubicacion)
+    - [Juan](nombres) ponela en la boquilla donde está la [biblioteca](ubicacion)
+- intent: hablar
+  examples: |
+    - [Pedro](nombres) dice "Hermoso dia verdad"
+    - [Juan](nombres) explica "Para comenzar agarra la tarjeta"
+    - [Pedro](nombres) dice "No quiero un bobo"
+    - [Juan](nombres) explica "Cabernet Sauvignion"
+    - [Pedro](nombres) dice "Todo ha sucedido según dijo el señor"
+    - [Juan](nombres) explica "Brindando desde el avion"
+    - [Pedro][{"entity": "nombres"}, {"entity": "nombres"}] dice "Hermoso dia verdad"
+- intent: seguir
+  examples: |
+    - [Pedro](nombres) sigue a [Juan](nombres) hacia la [mesa](ubicacion)
+    - [Juan](nombres) acompana [Camila](nombres) hasta el [escritorio](ubicacion)
+    - [Juan](nombres) acompana a [Camila](nombres) hasta el [escritorio](ubicacion)
+    - [Juan](nombres) persigue a [Camila](nombres) hasta el [escritorio](ubicacion)
+    - [Juan](nombres) y [Camila](nombres) van hasta el [escritorio](ubicacion)
+    - [Juan](nombres) y [Camila](nombres) van al [escritorio](ubicacion)
+- intent: sentarse
+  examples: |
+    - [Pedro](nombres) se sienta en [silla](asiento)
+    - [Juan](nombres) toma asiento en la [silla](asiento)
+- intent: moverObjeto
+  examples: |
+    - Mover Objeto [botella de agua](objeto) hacia [mueble](ubicacion)
+    - Mover Objeto [Camera](objeto) hasta [UbicacionCamara1](ubicacion)
+    - Correr el objeto [cafe](objeto) hacia [room1](ubicacion)
+    - Correr el objeto [Task](objeto) hasta el [room2](ubicacion)
+    - Mover [Camera](objeto) a la [UbicacionCamara1](ubicacion)
+    - cambiar [Camera](objeto) a la [UbicacionCamara1](ubicacion)
+    - desplazar [Camera](objeto) hasta [UbicacionCamara1](ubicacion)
+    - [Camera](objeto) a [UbicacionCamara1](ubicacion)
+- intent: moverAvatar
+  examples: |
+    - Mover avatar [Pedro](nombres) hacia [mueble](ubicacion) con una distancia de [1](distanciaUnity)
+    - Mover avatar [Camila](nombres) con una distancia de [5](distanciaUnity) hacia [room1](ubicacion)
+    - Correr avatar [Pedro](nombres) hacia [escalera](ubicacion) con una distancia de [7](distanciaUnity)
+    - Correr avatar [Juan](nombres) con una distancia de [2](distanciaUnity) hacia [room2](ubicacion)
+    - [Pedro](nombres) se mueve hacia el [escritorio](ubicacion)
+    - [Camila](nombres) se dirige hasta el [mueble](ubicacion)
+    - [Juan](nombres) va hasta el [Kanban](ubicacion)
+    - [Tobias](nombres) va hacia el [Kanban](ubicacion)
+    - [Facundo](nombres) se mueve hacia [Pedro](nombres)
+    - [Facundo](nombres) va hacia la [cocina](ubicacion)
+    - [Facundo](nombres) camina hasta el [cocina](ubicacion)
+    - [Facundo](nombres) camina hasta la [cocina](ubicacion)
+    - [Facundo](nombres) va hasta la [cocina](ubicacion)
+    - [Facundo](nombres) se para en la [cocina](ubicacion)
+    - [Facundo](nombres) se para en el [cocina](ubicacion)
+    - [Facundo](nombres) se para en el [cocina](ubicacion) con una distancia de [2](distanciaUnity)
+    - [Facundo](nombres) va hasta el [cajero](ubicacion)
 - lookup: nombres
   examples: |
     - Pedro
@@ -97,7 +208,6 @@ nlu:
     - AgileBot_Room
     - Director
     - Santi
-
 - lookup: ubicacion
   examples: |
     - escritorio
@@ -116,7 +226,6 @@ nlu:
     - room2
     - luz
     - cajero
-
 - lookup: objeto
   examples: |
     - Tarjeta
@@ -130,7 +239,6 @@ nlu:
     - libro
     - Camera
     - Task
-
 - lookup: objetoTrainer
   examples: |
     - cajero
@@ -153,7 +261,6 @@ nlu:
     - charla
     - habla
     - discute
-
 - lookup: animacionSolitaria
   examples: |
     - senala
@@ -164,7 +271,6 @@ nlu:
     - apuntar
     - charla
     - saltar
-
 - lookup: asiento
   examples: |
     - silla
@@ -172,43 +278,9 @@ nlu:
     - banqueta
     - banquito
     - sillon
-
 - lookup: distanciaUnity
   examples: |
     - \d{1,12}
-    
-- intent: cajero
-  examples: |
-    - Ahora el [cajero](objetoTrainer) muestra como [login entrenamiento](operacion)
-    - Ahora en el [cajero](objetoTrainer) se enseña como [login entrenamiento](operacion)
-    - el [cajero](objetoTrainer) muestra como [login entrenamiento](operacion)
-    - a continuacion el [cajero](objetoTrainer) explicara como [login entrenamiento](operacion)
-
-- intent: agarrar
-  examples: |
-    - [Pedro](nombres) agarra la [Tarjeta](objeto)
-    - [Pedro](nombres) agarra [CafePedro](objeto)
-    - [Tobias](nombres) sujeta la [Tarjeta](objeto)
-    - [Camila](nombres) agarra el [cafe](objeto)
-    - [Juan](nombres) sujeta el [cafe](objeto)
-    - [Pedro](nombres) toma el [Tarjeta](objeto)
-    - [Pedro](nombres) toma la [Tarjeta](objeto)
-    - [Pedro](nombres) levanta la [Tarjeta](objeto)
-    - [Pedro](nombres) levanta el [Tarjeta](objeto)
-
-
-- intent: conjunta
-  examples: |
-    - [Pedro](nombres) [dialoga](animacionConjunta) con [Tobias](nombres)
-
-- intent: reproducir_animacion
-  examples: |
-    - [Pedro](nombres) realiza animacion [senala](animacionSolitaria) 
-    - [Pedro](nombres) reproducir animacion [senala](animacionSolitaria) 
-    - [Pedro](nombres) [senala](animacionSolitaria) 
-    - [Pedro](nombres) [charla](animacionSolitaria)
-
-
 - lookup: boton
   examples: |
     - Verde
@@ -232,105 +304,3 @@ nlu:
     - 7
     - 8
     - 9
-
-- intent: apretar_boton
-  examples: |
-    - [Juan](nombres) toca boton numero [1](boton)
-    - [Juan](nombres) apreta boton cajero numero [0](boton)
-    - [Juan](nombres) Toca boton cajero numero [2](boton)
-    - [Juan](nombres) Apreta boton cajero numero [1](boton)
-    - [Juan](nombres) Toca boton numero [5](boton)
-    - [Juan](nombres) Toca boton cajero numero [9](boton)
-    - [Juan](nombres) Apreta boton numero [3](boton)
-    - [Juan](nombres) Acciona boton cajero numero [4](boton)
-    - [Juan](nombres) Acciona boton numero [5](boton)
-    - [Juan](nombres) Selecciona boton numero [6](boton)
-    - [Juan](nombres) Toca boton [Verde](boton)
-    - [Juan](nombres) Apreta boton cajero [Rojo](boton)
-    - [Juan](nombres) Toca boton [Amarillo](boton)
-    - [Juan](nombres) Apreta boton cajero [SuperiorDerecho](boton)
-    - [Juan](nombres) Toca boton cajero [MedioSuperiorDerecho](boton)
-    - [Juan](nombres) Apreta boton [MedioInferiorDerecho](boton)
-    - [Juan](nombres) Acciona boton cajero [InferiorDerecho](boton)
-    - [Juan](nombres) Acciona boton [SuperiorIzquierdo](boton)
-    - [Juan](nombres) Selecciona boton cajero [MedioSuperiorIzquierdo](boton)
-    - [Juan](nombres) Selecciona boton [MedioInferiorIzquierdo](boton)
-
-- intent: dejar
-  examples: |
-    - [Pedro](nombres) deja lo que tiene en la mano en la [mesa](ubicacion) 
-    - [Juan](nombres) deja la [tarjeta](objeto) en el [mueble](ubicacion)
-    - [Facundo](nombres) deja en [Kanban](ubicacion)
-    - [Juan](nombres) deja el [libro](objeto) en la [biblioteca](ubicacion)
-    - [Juan](nombres) deja lo que lleva en la [biblioteca](ubicacion)
-    - [Juan](nombres) deja lo que lleva en el [biblioteca](ubicacion)
-    - [Juan](nombres) deja lo que lleva sobre [biblioteca](ubicacion)
-    - [Juan](nombres) apoya lo que lleva en la [biblioteca](ubicacion)
-    - [Juan](nombres) apoya lo que lleva en el [biblioteca](ubicacion)
-    - [Juan](nombres) apoya lo que lleva sobre [biblioteca](ubicacion)
-    - [Juan](nombres) suelta lo que lleva en la [biblioteca](ubicacion)
-    - [Juan](nombres) suelta lo que lleva en el [biblioteca](ubicacion)
-    - [Juan](nombres) suelta lo que lleva sobre [biblioteca](ubicacion)    
-    - [Juan](nombres) devuelve lo que lleva en el [biblioteca](ubicacion)
-    - [Juan](nombres) devuelve lo que lleva en la [biblioteca](ubicacion)
-    - [Juan](nombres) devuelve lo que lleva sobre [biblioteca](ubicacion)
-    - [Juan](nombres) ponela de ese lado en la boquilla donde está la [biblioteca](ubicacion), la boquilla es la que está a tu derecha
-    - [Juan](nombres) ponela de ese lado en la boquilla donde está la [biblioteca](ubicacion)
-    - [Juan](nombres) ponela en la boquilla donde está la [biblioteca](ubicacion)
-
-- intent: hablar  
-  examples: |
-    - [Pedro](nombres) dice "Hermoso dia verdad" 
-    - [Juan](nombres) explica "Para comenzar agarra la tarjeta" 
-    - [Pedro](nombres) dice "No quiero un bobo" 
-    - [Juan](nombres) explica "Cabernet Sauvignion" 
-    - [Pedro](nombres) dice "Todo ha sucedido según dijo el señor" 
-    - [Juan](nombres) explica "Brindando desde el avion" 
-
-- intent: seguir
-  examples: |
-    - [Pedro](nombres) sigue a [Juan](nombres) hacia la [mesa](ubicacion) 
-    - [Juan](nombres) acompana [Camila](nombres) hasta el [escritorio](ubicacion) 
-    - [Juan](nombres) acompana a [Camila](nombres) hasta el [escritorio](ubicacion) 
-    - [Juan](nombres) persigue a [Camila](nombres) hasta el [escritorio](ubicacion) 
-    - [Juan](nombres) y [Camila](nombres) van hasta el [escritorio](ubicacion)
-    - [Juan](nombres) y [Camila](nombres) van al [escritorio](ubicacion) 
-
-   
-- intent: sentarse
-  examples: |
-    - [Pedro](nombres) se sienta en [silla](asiento) 
-    - [Juan](nombres) toma asiento en la [silla](asiento)  
-
-- intent: moverObjeto
-  examples: |
-    - Mover Objeto [botella de agua](objeto) hacia [mueble](ubicacion)
-    - Mover Objeto [Camera](objeto) hasta [UbicacionCamara1](ubicacion)
-    - Correr el objeto [cafe](objeto) hacia [room1](ubicacion)
-    - Correr el objeto [Task](objeto) hasta el [room2](ubicacion)
-    - Mover [Camera](objeto) a la [UbicacionCamara1](ubicacion)
-    - cambiar [Camera](objeto) a la [UbicacionCamara1](ubicacion)
-    - desplazar [Camera](objeto) hasta [UbicacionCamara1](ubicacion)
-    - [Camera](objeto) a [UbicacionCamara1](ubicacion)
-
-
-- intent: moverAvatar
-  examples: |
-    - Mover avatar [Pedro](nombres) hacia [mueble](ubicacion) con una distancia de [1](distanciaUnity)
-    - Mover avatar [Camila](nombres) con una distancia de [5](distanciaUnity) hacia [room1](ubicacion) 
-    - Correr avatar [Pedro](nombres) hacia [escalera](ubicacion) con una distancia de [7](distanciaUnity)
-    - Correr avatar [Juan](nombres) con una distancia de [2](distanciaUnity) hacia [room2](ubicacion)
-    - [Pedro](nombres) se mueve hacia el [escritorio](ubicacion)
-    - [Camila](nombres) se dirige hasta el [mueble](ubicacion)
-    - [Juan](nombres) va hasta el [Kanban](ubicacion)
-    - [Tobias](nombres) va hacia el [Kanban](ubicacion)
-    - [Facundo](nombres) se mueve hacia [Pedro](nombres)
-    - [Facundo](nombres) va hacia la [cocina](ubicacion)
-    - [Facundo](nombres) camina hasta el [cocina](ubicacion)
-    - [Facundo](nombres) camina hasta la [cocina](ubicacion)
-    - [Facundo](nombres) va hasta la [cocina](ubicacion)
-    - [Facundo](nombres) se para en la [cocina](ubicacion)
-    - [Facundo](nombres) se para en el [cocina](ubicacion)
-    - [Facundo](nombres) se para en el [cocina](ubicacion) con una distancia de [2](distanciaUnity)
-    - [Facundo](nombres) va hasta el [cajero](ubicacion)
-    

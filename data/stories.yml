@@ -11,3 +11,13 @@ stories:
     - action: action_guardar_accion 
     - action: utter_preg_sig_accion
 
+
+- story: interactive_story_1
+  steps:
+  - intent: hablar
+    entities:
+    - nombres: Pedro
+    - nombres: Pedro
+  - slot_was_set:
+    - nombres: Pedro
+  - action: action_guardar_accion
